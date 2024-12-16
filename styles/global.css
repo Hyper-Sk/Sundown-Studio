@@ -1,0 +1,82 @@
+
+@font-face {
+    font-family: neueMedium;
+    src: url('../fonts/NeueHaasDisplayMediu.ttf');
+}
+@font-face {
+    font-family: neueRegular;
+    src: url('../fonts/NeueHaasDisplayRoman.ttf');
+}
+:root{
+    --text-dark:#212121;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: neueRegular;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    /* background-color: #e5e5e5; */
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+    color: var(--text-dark);
+}
+span{
+    display: inline-block;
+    color: var(--text-dark);
+}
+
+p{
+    font-size: 14px;
+    color: var(--text-dark);
+}
+h1,h2,h3,h4,h5,h6{
+    color: var(--text-dark);
+    font-family: neueMedium;
+}
+
+.btn1{
+    border: 1px solid rgba(0,0,0,0.3);
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    position: relative;
+    transition: 0.4s;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.btn1::after{
+    content: "";
+    background-color: black;
+    border-radius: 70%;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(100%);
+    transition: 0.4s;
+
+}
+.btn1:hover::after{
+    transform: translateY(0%);
+    scale: 2;
+}
+
+.btn1 span{
+    font-family: neueMedium;
+}
+
+.btn1:hover span{
+    color: white;
+    position: relative;
+    z-index: 2;
+}

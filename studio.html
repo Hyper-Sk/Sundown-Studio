@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        position: relative;
+      }
+      .overlay {
+        margin-top: 5rem;
+        position: relative;
+        background-color: red;
+        width: 500px;
+        height: 500px;
+        top: 0%;
+        left:0%;
+        border-radius: 50%;
+        filter: blur(30px);
+      }
+      .overlay .circle {
+        background-color: red;
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        background-color: red;
+        /* filter: blur(30px); */
+        animation-name: about;
+        animation-timing-function: linear;
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        transform: skew(30deg,20deg);
+      }
+
+      @keyframes about {
+        from {
+          transform: translate(-0%, -20%);
+        }
+        to {
+          transform: translate(-100%, -20%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="overlay">
+      <div class="circle"></div>
+    </div>
+  </body>
+</html>
