@@ -6,7 +6,7 @@
     top: 0;
     left: 0;
     background-color: black;
-    height: 100vh;
+    height: 100dvh;
     width: 100%;
     z-index: 9999;
     transition: 0.5s;
