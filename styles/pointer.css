@@ -1,0 +1,23 @@
+.pointer {
+    position: fixed;
+    background-color: orangered;
+    height: 55px;
+    width: 55px;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 9999;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    border: 1px solid white;
+    pointer-events: none;
+    opacity: 0;
+}
+
+@media screen and (max-width:768px) {
+    .pointer{
+        opacity: 0;
+    }
+}

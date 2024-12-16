@@ -1,6 +1,6 @@
 #main {
   overflow-x: hidden;
-  background-color: aliceblue;
+  background-color: var(--bg-first);
 }
 
 .hero {
@@ -13,7 +13,7 @@
   display: flex;
   justify-content: space-between;
   align-items: end;
-  height: 65vh;
+  height: 65dvh;
 }
 .hero-content .hero__left {
 }
@@ -40,7 +40,7 @@
     display: flex;
     justify-content: space-between;
     align-items: end;
-    height: 40vh;
+    height: 40dvh;
   }
   .hero-content .hero__left p {
     width:200px;
@@ -71,7 +71,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  background-color: #f5370d;
+  background-color:var(--bg-second);
   filter: blur(30px);
   animation-name: circle1;
   animation-timing-function: linear;
@@ -86,7 +86,7 @@
   position: absolute;
   top: 0;
   right: 10%;
-  background-color: #f5370d;
+  background-color: var(--bg-second);
   filter: blur(30px);
   animation: circle2;
   animation-timing-function: linear;
@@ -153,7 +153,7 @@
 .scroller-content .part .circle {
   width: 6vw;
   height: 6vw;
-  background-color: #f5370d;
+  background-color: var(--bg-second);
   border-radius: 50%;
 }
 .scroller-content .part h3 {
@@ -181,7 +181,7 @@
   display: grid;
   grid-template-columns: 1fr 25vw;
   gap: 60px;
-  height: 90vh;
+  height: 90dvh;
   align-items: center;
   position: relative;
 }
@@ -206,7 +206,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #f5370d;
+  background-color: var(--bg-second);
   filter: blur(30px);
 }
 .about-content .overlay .circle2 {
@@ -216,7 +216,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #f5370d;
+  background-color: var(--bg-second);
   filter: blur(30px);
   animation: about2;
   animation-timing-function: linear;
@@ -249,6 +249,8 @@
 .about-content .about__right img {
   width: 100%;
   border-radius: 10px;
+  position: relative;
+  z-index: 2;
 }
 .about-content .about__right p {
   font-size: 1rem;
@@ -292,7 +294,7 @@
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background-color: #f5370d;
+  background-color: var(--bg-second);
 }
 .work-content .title {
   display: flex;
@@ -317,7 +319,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #f5370d;
+  background-color: orange;
   transition: 0.2s;
 }
 .work-content .work__single:hover::after {
@@ -393,7 +395,7 @@
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background-color: #f5370d;
+    background-color: var(--bg-second);
   }
   .work-content .title {
     display: flex;
@@ -441,7 +443,7 @@
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background-color: #f5370d;
+  background-color: var(--bg-second);
 }
 .slider .title {
   display: flex;
@@ -462,6 +464,7 @@
 .slider .swiper-slide img {
   width: 200px;
   margin-bottom: 2rem;
+  pointer-events: none;
 }
 .slider .swiper-slide p {
   font-size: 1.2vw;
@@ -477,6 +480,7 @@
 }
 .slider .swiper-slide {
   max-width: 100%;
+  border-right: 0px solid rgba(0, 0, 0, 0.3);
 }
 .slider .swiper-slide img {
   width: 150px;
@@ -490,17 +494,17 @@
 /* ******************* Footer area *******************  */
 .footer-overlay {
   height: 0vh;
-  margin-bottom: 100vh;
+  margin-bottom: 100dvh;
   opacity: 0;
   pointer-events: none;
 }
 .footer {
-  height: 100vh;
+  height: 100dvh;
   padding: 4rem 0rem 0rem;
-  background-color: red;
+  background-color: var(--bg-second);
   position: fixed;
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   top: 0;
   left: 0;
   z-index: -1;
@@ -566,6 +570,8 @@
 .footer-content .bottom a {
   color: white;
   text-transform: uppercase;
+  /* font-family: neueMedium; */
+  letter-spacing: 1px;
 }
 
 .footer .overlay {
@@ -611,15 +617,15 @@
 @media screen and (max-width:768px) {
   .footer-overlay {
     height: 0vh;
-    margin-bottom: 50vh;
+    margin-bottom: 50dvh;
     opacity: 0;
     pointer-events: none;
   }
   .footer {
     padding: 2rem 0rem 0rem;
     width: 100%;
-    height: 50vh;
-    margin-top: 50vh;
+    height: 50dvh;
+    margin-top: 50dvh;
   }
 
 
@@ -636,7 +642,7 @@
     width: 50%;
   }
   .footer-content .top .info h4 {
-    font-size: 0.8rem;
+    font-size: 1rem;
     margin-bottom: 1rem;
   }
   .footer-content .top .info input {
@@ -654,7 +660,7 @@
   .footer-content .bottom {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 10px;
     justify-content: space-between;
     border-top: 1px solid white;
     padding-block: 1rem;
@@ -673,6 +679,11 @@
     border-radius: 50%;
     filter: blur(50px);
     /* display: none; */
+  }
+  .footer-content .bottom a {
+    color: white;
+    text-transform: uppercase;
+    font-size: 1rem;
   }
   
 }
